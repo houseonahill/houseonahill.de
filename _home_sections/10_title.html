@@ -1,0 +1,22 @@
+---
+image: cover_plain_mfkph2
+hide_nav: false
+---
+
+<h1>
+	{% include logo-white.svg %}
+</h1>
+
+<h2>Play</h2>
+
+<nav>
+	<ul>
+		{% for section in site.home_sections %}
+		{% if section.hide_nav != false %}
+		<li>
+			<a href="#{{ section.title }}">{{ section.nav_title }}</a>
+		</a>
+		{% endif %}
+		{% endfor %}
+	</ul>
+</nav>
