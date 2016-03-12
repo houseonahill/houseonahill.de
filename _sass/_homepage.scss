@@ -33,11 +33,22 @@ nav {
 	background-position: center center;
 
 	.block {
-		max-width: 760px;
+		max-width: 90%;
 		margin: 0 auto;
 		padding: 3rem 0;
 		font-size: 1.2em;
 		text-shadow: -1px 1px 0 rgba(255, 255, 255, 1);
+
+		p, h1, h2, h3, h4, h5, h6 {
+			max-width: 680px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		h1, h2 {
+			max-width: 960px;
+			text-align: center;
+		}
 	}
 
 	.block-white {
@@ -56,6 +67,79 @@ nav {
 	margin: 0 auto;
 }
 
+.left {
+	max-width: 50%;
+	float: left;
+	margin: 0 2.2em 1.1em 0;
+}
+
+.right {
+	max-width: 50%;
+	float: right;
+	margin: 0 0 1.1em 2.2em;
+}
+
+.clear {
+	clear: both;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.member {
+	margin-top: 2em;
+	margin-bottom: 0;
+	width: 420px;
+	max-width: 420px;
+	height: 220px;
+
+	.face {
+		float: left;
+		margin-right: 20px;
+	}
+
+	&.right {
+		text-align: right;
+		.face {
+			float: right;
+			margin-left: 20px;
+			margin-right: 0;
+		}
+	}
+
+	&.claus, &.hannes {
+		h4 {
+			padding-top: 50px;
+		}
+	}
+
+	&.barbara {
+		h4 {
+			padding-top: 35px;
+		}
+	}
+
+	&.rene {
+		h4 {
+			padding-top: 65px;
+		}
+	}
+
+	&.for-small {
+		display: none;
+	}
+}
+
+img.cd {
+	border-radius: 4px;
+	padding: 0;
+	box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+img.face {
+	border-radius: 100%;
+}
 
 @media (min-height:38em) {
 	nav li {
@@ -71,5 +155,18 @@ nav {
 	}
 	.logo-white {
 		max-height: 7em;
+	}
+}
+
+@media (max-width: 720px) {
+	.member {
+		display: none;
+		&.for-small, &.for-both {
+			width: 100%;
+			max-width: 100%;
+			margin: -30px 0 0;
+			display: block;
+			float: none;
+		}
 	}
 }

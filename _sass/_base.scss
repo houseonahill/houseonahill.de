@@ -12,7 +12,9 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
+strong {
+    font-weight: $bold-font-weight;
+}
 
 /**
  * Basic styling
@@ -87,7 +89,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: $bold-font-weight;
 }
 
-
+h2 {
+    font-size: 2em;
+    margin-bottom: 2em;
+}
 
 /**
  * Links
