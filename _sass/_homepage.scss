@@ -7,7 +7,9 @@ nav {
 	li {
 		display: inline;
 		font-size: 3em;
+		font-size: 8vh;
 		line-height: 3em;
+		line-height: 8vh;
 		text-shadow: -2px 2px 0 rgba(0, 0, 0, 1);
 		&:after {
 			content: ' ● ';
@@ -47,15 +49,27 @@ nav {
 	}
 }
 
-#title {
-	.logo-white {
-		display: block;
-		width: 80%;
-		margin: 0 auto;
+.logo-white {
+	display: block;
+	max-height: 16em;
+	max-height: 80vh;
+	margin: 0 auto;
+}
+
+
+@media (min-height:38em) {
+	nav li {
+		font-size: 3em;
+		line-height: 3em;
 	}
-	nav {
-		ul {
-			margin-bottom: 0;
-		}
+}
+
+@media (max-height:20em) {
+	nav li {
+		font-size: 1.5em;
+		line-height: 1.5em;
+	}
+	.logo-white {
+		max-height: 7em;
 	}
 }
