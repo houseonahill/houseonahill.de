@@ -59,7 +59,7 @@
       ':',
       prependZero(date.getMinutes()),
     ].join('');
-    // console.log(event);
+
     return event;
   }
 
