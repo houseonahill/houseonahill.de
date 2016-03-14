@@ -29,26 +29,8 @@ nav {
 }
 
 .section {
-	position: relative;
-
-	.sectionbgwrap {
-		clip: rect(0, auto, auto, 0);
-		top: 0px;
-		left: 0px;
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		z-index: -1;
-	}
-
-	.sectionbg {
-		position: fixed;
-		height: 100%;
-		top: 0px;
-		width: 100%;
-		background-size: cover;
-		background-position: center center;
-	}
+	background-position: center center;
+	background-size: cover;
 
 	.block {
 		max-width: 90%;
