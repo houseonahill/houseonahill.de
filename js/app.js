@@ -100,12 +100,12 @@
                   '<span class="time">Ab ca. {{ event.time }} Uhr</span>',
                 '</div>',
                 '<h3>{{ event.name }}</h3>',
-                '<hoah-location ng-if="event.place.location"',
+                '<hoah-location ng-if="!private(event.name) && event.place.location"',
                   'name="event.place.name"',
                   'location="event.place.location">',
                 '</hoah-location>',
-                '<span class="clear"></span>',
                 '<p ng-if="event.description">{{ event.description }}</p>',
+                '<span class="clear"></span>',
               '</li>',
             '</ul>',
             '<button class="more" ng-if="show < max" ng-click="more()">Mehr anzeigen</button>',
@@ -119,6 +119,10 @@
 
         $scope.more = function() {
           $scope.show += showEvents;
+        };
+
+        $scope.private = function(title) {
+          return title.indexOf('privat') !== -1;
         };
 
         $http.get(eventUrl).then(function(response) {
