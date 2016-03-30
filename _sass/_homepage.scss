@@ -13,7 +13,7 @@ nav {
 		text-shadow: -2px 2px 0 rgba(0, 0, 0, 1);
 		&:after {
 			content: ' ● ';
-			color: white;
+			color: $white-color;
 			padding: 0 0.5em;
 		}
 		&:last-child:after {
@@ -21,9 +21,9 @@ nav {
 		}
 	}
 	a, a:visited {
-		color: white;
+		color: $white-color;
 		&:hover {
-			color: white;
+			color: $white-color;
 		}
 	}
 }
@@ -52,11 +52,29 @@ nav {
 	}
 
 	.block-white {
-		color: white;
+		color: $white-color;
 	}
 
 	.subtile {
 		background: rgba(255, 255, 255, 0.5);
+	}
+}
+
+.section-type-white {
+	background: $white-color;
+	.block {
+		text-shadow: none;
+	}
+}
+
+.section-type-black {
+	background: $black-color;
+	color: $white-color;
+	.block {
+		text-shadow: none;
+	}
+	a:hover {
+		color: $white-color;
 	}
 }
 
@@ -83,8 +101,8 @@ nav {
 		max-width: 630px;
 		padding: 20px;
 		margin: 2em auto;
-		border: 5px solid black;
-		box-shadow: -1px 1px 0 white, -1px 1px 0 white inset;
+		border: 5px solid $black-color;
+		box-shadow: -1px 1px 0 $white-color, -1px 1px 0 $white-color inset;
 		span {
 			display: block;
 		}

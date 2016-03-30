@@ -3,7 +3,7 @@ layout: homepage
 ---
 
 {% for section in site.home_sections %}
-	<div class="section" id="{{ section.title }}" hoah-image="{{ section.image }}" style="background-color: #{{ section.color }};">
+	<div class="section section-type-{{ section.type }}" id="{{ section.title }}" hoah-image="{{ section.image }}" style="background-color: #{{ section.color }};">
 		{{ section.output }}
 	</div>
 {% endfor %}
