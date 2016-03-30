@@ -98,11 +98,12 @@ nav {
 		margin-bottom: 2.5em;
 	}
 	.location {
+		background: $white-color;
+		color: $black-color;
 		max-width: 630px;
 		padding: 20px;
 		margin: 2em auto;
 		border: 5px solid $black-color;
-		box-shadow: -1px 1px 0 $white-color, -1px 1px 0 $white-color inset;
 		span {
 			display: block;
 		}
@@ -117,7 +118,6 @@ nav {
 		font-family: $base-font-family;
 		font-weight: $bold-font-weight;
 		font-size: 2em;
-		text-shadow: -1px 1px 0 rgba(255, 255, 255, 1);
 		&:hover, &:focus {
 			text-decoration: underline;
 			&:after {
