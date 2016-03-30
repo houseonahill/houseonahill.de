@@ -79,10 +79,12 @@
       return {
         restrict: 'A',
         link: function(scope, $elem, attr) {
-          $elem.css(
-            'background-image',
-            getImage(attr.hoahImage)
-          );
+          if (attr.hoahImage && attr.hoahImage.length) {
+            $elem.css(
+              'background-image',
+              getImage(attr.hoahImage)
+            );
+          }
         }
       }
     })
