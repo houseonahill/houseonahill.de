@@ -19,14 +19,16 @@
     document.getElementsByTagName('head').item(0).appendChild(script);
   }
 
-  function getImage(imgId) {
+  function getImage(imgId, elem) {
+    var rect = elem.getClientRects()[0];
+
     return [
       'url("',
       baseUrl,
       'w_',
-      Math.ceil(screen.width / 100) * 100,
+      Math.ceil(rect.width / 100) * 100,
       ',h_',
-      Math.ceil(screen.height / 100) * 100,
+      Math.ceil(rect.height / 100) * 100,
       ',q_70',
       ',c_fill',
       '/',
@@ -82,7 +84,7 @@
           if (attr.hoahImage && attr.hoahImage.length) {
             $elem.css(
               'background-image',
-              getImage(attr.hoahImage)
+              getImage(attr.hoahImage, $elem[0])
             );
           }
         }
