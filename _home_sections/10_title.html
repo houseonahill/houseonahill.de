@@ -4,7 +4,7 @@ color: 3d7586
 hide_nav: false
 ---
 
-<nav>
+<nav hoah-nav ng-class="{'nav-float': !top}">
 	<ul>
 		{% for section in site.home_sections %}
 		{% if section.hide_nav != false %}
@@ -16,7 +16,7 @@ hide_nav: false
 	</ul>
 </nav>
 
-<h1>
+<h1 class="title">
 	{% include logo-white.svg %}
 </h1>
 

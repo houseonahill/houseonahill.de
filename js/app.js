@@ -77,6 +77,30 @@
 
       return d.promise;
     })
+    .directive('hoahNav', function() {
+      return {
+        restrict: 'A',
+        link: function(scope, $elem) {
+          scope.top = true;
+
+          function calc() {
+            if (window.scrollY > 0 && scope.top) {
+              scope.$evalAsync(function() {
+                scope.top = false;
+              });
+            } else if (window.scrollY === 0 && !scope.top) {
+              scope.$evalAsync(function() {
+                scope.top = true;
+              });
+            }
+          }
+
+          calc();
+
+          angular.element(window).on('scroll', calc);
+        }
+      };
+    })
     .directive('hoahImage', function() {
       return {
         restrict: 'A',
@@ -88,7 +112,7 @@
             );
           }
         }
-      }
+      };
     })
     .component('hoahEvents', {
       template: [

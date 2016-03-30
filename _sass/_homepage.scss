@@ -1,16 +1,17 @@
 nav {
 	font-weight: $bold-font-weight;
+	position: absolute;
+	width: 100%;
+	transition: .1s linear background, .1s linear border-bottom;
 	ul {
-		padding: 0;
+		padding: 1em 0;
+		margin: 0;
 		text-align: center;
 	}
 	li {
 		display: inline;
-		font-size: 3em;
-		font-size: 8vh;
-		line-height: 3em;
-		line-height: 8vh;
-		text-shadow: -2px 2px 0 rgba(0, 0, 0, 1);
+		font-size: 2.5em;
+		line-height: 1;
 		&:after {
 			content: ' ● ';
 			color: $white-color;
@@ -26,6 +27,15 @@ nav {
 			color: $white-color;
 		}
 	}
+	&.nav-float {
+		position: fixed;
+		background: $black-color;
+		border-bottom: 2px solid $white-color;
+	}
+}
+
+h1.title {
+	padding-top: 4em;
 }
 
 .section {
@@ -37,7 +47,6 @@ nav {
 		margin: 0 auto;
 		padding: 3rem 0;
 		font-size: 1.2em;
-		text-shadow: -1px 1px 0 rgba(255, 255, 255, 1);
 
 		p, h1, h2, h3, h4, h5, h6, .hoah-map {
 			max-width: 680px;
@@ -62,17 +71,11 @@ nav {
 
 .section-type-white {
 	background: $white-color;
-	.block {
-		text-shadow: none;
-	}
 }
 
 .section-type-black {
 	background: $black-color;
 	color: $white-color;
-	.block {
-		text-shadow: none;
-	}
 	a:hover {
 		color: $white-color;
 	}
@@ -226,15 +229,19 @@ img.face {
 
 @media (min-height:38em) {
 	nav li {
-		font-size: 3em;
-		line-height: 3em;
+		font-size: 2.5em;
 	}
 }
 
-@media (max-height:20em) {
+@media (max-width: 1100px)  {
+	nav li {
+		font-size: 2em;
+	}
+}
+
+@media (max-height:25em) {
 	nav li {
 		font-size: 1.5em;
-		line-height: 1.5em;
 	}
 	.logo-white {
 		max-height: 7em;
@@ -242,6 +249,9 @@ img.face {
 }
 
 @media (max-width: 720px) {
+	nav li {
+		font-size: 1.5em;
+	}
 	.member {
 		display: none;
 		&.for-small, &.for-both {
@@ -256,5 +266,11 @@ img.face {
 		float: none;
 		width: 100%;
 		max-width: 100%;
+	}
+}
+
+@media (max-width: 600px)  {
+	nav li {
+		font-size: 1em;
 	}
 }
