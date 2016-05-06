@@ -31,6 +31,7 @@ nav {
 		position: fixed;
 		background: $black-color;
 		border-bottom: 2px solid $white-color;
+		z-index: 100;
 	}
 }
 
