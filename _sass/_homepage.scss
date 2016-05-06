@@ -86,6 +86,14 @@ h1.title {
 	height: 70vh;
 }
 
+.open-doors-medley {
+	margin-bottom: 1em;
+}
+
+.no-audio .open-doors-medley {
+	display: none;
+}
+
 .events {
 	.quick {
 		width: 30%;
