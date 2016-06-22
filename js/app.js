@@ -46,7 +46,10 @@
   }
 
   function enrichEvent(event) {
-    var date = new Date(event.start_time);
+    var startTime = event.start_time.split('+')[0];
+    var startTimeOffset = parseInt(event.start_time.split('+')[1], 10) / 100;
+    var date = new Date(startTime);
+    date.setHours(date.getHours() - startTimeOffset);
 
     event.date = [
       prependZero(date.getDate()),
