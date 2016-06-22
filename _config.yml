@@ -7,7 +7,7 @@
 
 # Site settings
 title: House on a Hill
-baseurl: "/houseonahill.de"
+baseurl: ""
 collections:
   - home_sections
 # Build settings
