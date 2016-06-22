@@ -99,6 +99,8 @@ h1.title {
 	display: block;
 	margin: 0 auto;
 	border: 5px solid $white-color;
+	width: 640px;
+	height: 360px;
 }
 
 .events {
@@ -267,6 +269,10 @@ img.face {
 	nav li {
 		font-size: 1.5em;
 	}
+	.ymom-video {
+		width: 480px;
+		height: 270px;
+	}
 	.member {
 		display: none;
 		&.for-small, &.for-both {
@@ -287,5 +293,16 @@ img.face {
 @media (max-width: 600px)  {
 	nav li {
 		font-size: 1em;
+	}
+	.ymom-video {
+		width: 320px;
+		height: 180px;
+	}
+}
+
+@media (max-width: 400px)  {
+	.ymom-video {
+		width: 260px;
+		height: 145px;
 	}
 }
