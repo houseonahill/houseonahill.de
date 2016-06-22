@@ -308,4 +308,17 @@ img.face {
 		width: 260px;
 		height: 145px;
 	}
+	.member {
+		text-align: center !important;
+		height: auto;
+		margin: 0 0 2em 0 !important;
+		h4 {
+			padding-top: 5px !important;
+			margin: 0 !important;
+		}
+		.face {
+			float: none !important;
+			margin: 0 !important;
+		}
+	}
 }
