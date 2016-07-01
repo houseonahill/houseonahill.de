@@ -61,6 +61,14 @@ h1.title {
 		}
 	}
 
+	.block-small {
+		margin: 0 auto;
+		padding: .5rem 0;
+		h1, h2, h3, h4, h5 {
+			margin: 0 auto;
+		}
+	}
+
 	.block-white {
 		color: $white-color;
 	}
@@ -251,6 +259,9 @@ img.face {
 }
 
 @media (max-width: 1100px)  {
+	.booking h2 {
+		font-size: 1.5rem;
+	}
 	nav li {
 		font-size: 2em;
 	}
@@ -291,6 +302,9 @@ img.face {
 }
 
 @media (max-width: 600px)  {
+	.booking h2 {
+		font-size: 1rem;
+	}
 	nav li {
 		font-size: 1em;
 	}
