@@ -35,8 +35,29 @@ nav {
 	}
 }
 
+#title {
+  position: relative;
+}
+
 h1.title {
 	padding-top: 4em;
+}
+
+.title-social {
+  position: absolute;
+  text-align: center;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+}
+
+.title-social svg {
+  height: 1.7em;
+  padding: 0 .5em 0;
+}
+
+.title-social .st1 {
+  fill: $white-color;
 }
 
 .section {
