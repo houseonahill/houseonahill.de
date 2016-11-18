@@ -5,7 +5,7 @@
   var eventUrl = 'https://dl72tzizg8.execute-api.eu-west-1.amazonaws.com/dev/get';
   var showEvents = 10;
   var initMapCB = ('initMap' + Math.random()).replace('.', '');
-  var mapsApiKey = 'AIzaSyAEB5kpoobXdUbylkkRitbCdwHVB4w1MUE';
+  var mapsApiKey = 'AIzaSyBjqtsflwDUtEBs8_b3sg3BiIE5x_YOjMI';
   var mapsUrl = 'https://maps.googleapis.com/maps/api/js?key=' + mapsApiKey + '&callback=' + initMapCB;
 
   function loadGMaps() {
