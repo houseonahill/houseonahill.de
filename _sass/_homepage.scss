@@ -103,12 +103,18 @@ h1.title {
 	display: none;
 }
 
-.ymom-video {
+.yt-video {
 	display: block;
 	margin: 0 auto;
 	border: 5px solid $white-color;
-	width: 640px;
-	height: 360px;
+  margin-bottom: 1em;
+	width: 310px;
+	height: 175px;
+  float: left;
+}
+
+.yt-video:nth-child(even) {
+  float: right;
 }
 
 .events {
@@ -280,9 +286,9 @@ img.face {
 	nav li {
 		font-size: 1.5em;
 	}
-	.ymom-video {
-		width: 480px;
-		height: 270px;
+	.yt-video {
+		width: 250px;
+		height: 140px;
 	}
 	.member {
 		display: none;
@@ -308,7 +314,12 @@ img.face {
 	nav li {
 		font-size: 1em;
 	}
-	.ymom-video {
+	.yt-video,
+  .yt-video:nth-child(even)  {
+    float: none;
+  }
+  
+  .yt-video {
 		width: 320px;
 		height: 180px;
 	}
@@ -318,7 +329,7 @@ img.face {
 	nav li {
 		font-size: 0.8em;
 	}
-	.ymom-video {
+	.yt-video {
 		width: 260px;
 		height: 145px;
 	}
