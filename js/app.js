@@ -2,7 +2,7 @@
   'use strict';
 
   var baseUrl = 'http://res.cloudinary.com/hoah/image/upload/';
-  var eventUrl = 'https://dl72tzizg8.execute-api.eu-west-1.amazonaws.com/dev/get';
+  var eventUrl = 'https://542sg81lkf.execute-api.eu-central-1.amazonaws.com/prod/';
   var showEvents = 10;
   var initMapCB = ('initMap' + Math.random()).replace('.', '');
   var mapsApiKey = 'AIzaSyBjqtsflwDUtEBs8_b3sg3BiIE5x_YOjMI';
@@ -35,37 +35,6 @@
       imgId,
       '.jpg")'
     ].join('');
-  }
-
-  function prependZero(int) {
-    if (int <= 9) {
-      return '0' + int;
-    }
-
-    return int;
-  }
-
-  function enrichEvent(event) {
-    var startTime = event.start_time.split('+')[0];
-    var startTimeOffset = parseInt(event.start_time.split('+')[1], 10) / 100;
-    var date = new Date(startTime);
-    date.setHours(date.getHours() - startTimeOffset);
-
-    event.date = [
-      prependZero(date.getDate()),
-      '.',
-      prependZero(date.getMonth() + 1),
-      '.',
-      date.getFullYear()
-    ].join('');
-
-    event.time = [
-      prependZero(date.getHours()),
-      ':',
-      prependZero(date.getMinutes()),
-    ].join('');
-
-    return event;
   }
 
   angular.module('houseonahill', [])
@@ -125,10 +94,10 @@
             '<ul>',
               '<li ng-repeat="event in events | limitTo: show">',
                 '<div class="quick left">',
-                  '<span class="date">{{ event.date }}</span>',
+                  '<span class="date">{{ event.dateStr }}</span>',
                   '<br>',
                   '<span class="locationname" ng-if="event.place.name">{{ event.place.name }}<br></span>',
-                  '<span class="time">Ab ca. {{ event.time }} Uhr</span>',
+                  '<span class="time">Ab ca. {{ event.timeStr }} Uhr</span>',
                 '</div>',
                 '<h3>{{ event.name }}</h3>',
                 '<hoah-location ng-if="!private(event.name) && event.place.location"',
@@ -158,7 +127,7 @@
 
         $http.get(eventUrl).then(function(response) {
           $scope.loading = false;
-          $scope.events = response.data.map(enrichEvent);
+          $scope.events = response.data;
           $scope.max = $scope.events.length;
         });
       }
