@@ -1,7 +1,7 @@
 (function(angular, window) {
   'use strict';
 
-  var baseUrl = 'http://res.cloudinary.com/hoah/image/upload/';
+  var baseUrl = 'https://res.cloudinary.com/hoah/image/upload/';
   var eventUrl = 'https://542sg81lkf.execute-api.eu-central-1.amazonaws.com/prod/';
   var showEvents = 10;
   var initMapCB = ('initMap' + Math.random()).replace('.', '');
