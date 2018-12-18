@@ -18,9 +18,6 @@ Stüffelring 18
 
 Claus Diercks  
 Barbara Grischek  
-Hannes Diercks  
-René Raue  
-Claus Ulrich  
 
 #### Kontakt:
 
