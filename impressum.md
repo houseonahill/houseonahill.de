@@ -21,5 +21,4 @@ Barbara Grischek
 
 #### Kontakt:
 
-Telefon: +49 (0)40 642 02 400  
 E-Mail:	info@houseonahill.de
