@@ -246,9 +246,15 @@ h1.title {
 		}
 	}
 
-	&.claus, &.hannes, &.barbara {
+	&.claus, &.barbara {
 		h4 {
 			padding-top: 50px;
+		}
+	}
+	
+	&.hannes {
+		h4 {
+			padding-top: 20px;
 		}
 	}
 
